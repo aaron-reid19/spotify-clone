@@ -1,21 +1,21 @@
 /*
 filter-bar.tsx
-Desc: Handles Filter Bar Logic
+Desc: Handles Filter Bar Component Logic
 Author: Joshua Couto
 Created: 2026-02-08
 */
 
 import { useState } from 'react';
-import { ScrollView } from 'react-native';
+import { View, ScrollView, Pressable, StyleSheet, Text } from 'react-native';
 import FilterButton from './filter-button';
-
-
+import XButton from './x-button';
 
 function FilterBar() {
   const [activeFilter, setActiveFilter] = useState('Playlists');
 
   return (
     <ScrollView horizontal>
+      <XButton onPress={() => console.log('X Button pressed')} />
       <FilterButton
         title="Playlists"
         isActive={activeFilter === "Playlists"}

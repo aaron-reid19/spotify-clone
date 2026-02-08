@@ -1,20 +1,20 @@
 /*
 filter-button.tsx
-Desc: Handles Filter Button Logic
+Desc: Handles Filter Button Component Logic
 Author: Joshua Couto
 Created: 2026-02-08
 */
 
 import { Pressable, StyleSheet, Text } from 'react-native';
 
-// FilterButton component
+// Defining Filter Button Props
 interface FilterButtonProps {
   title: string;
   isActive: boolean;
   onPress: () => void;
 }
 
-// FilterButton changes color on press
+// Filter Button Render Logic | Style Change State onPress
 function FilterButton({ title, isActive, onPress }: FilterButtonProps) {
   return (
     <Pressable onPress={onPress}>
@@ -25,7 +25,7 @@ function FilterButton({ title, isActive, onPress }: FilterButtonProps) {
   );
 }
 
-// FilterButton Styling
+// Filter Button Styling
 const styles = StyleSheet.create({
   active: {
     paddingHorizontal: 12,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   inactive: {
     paddingHorizontal: 12,
     paddingVertical: 8,
-    backgroundColor: '#121212',
+    backgroundColor: '#333333',
     borderRadius: 20,
   },
   text: {
