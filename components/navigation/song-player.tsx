@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 const deviceIcon = require('@/assets/images/device-icon.png');
 const playIcon = require('@/assets/images/play-icon.png');
@@ -34,12 +34,14 @@ const SongPlayer = () => {
     );
 };
 
+export default SongPlayer;
+
 // Styles
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#282828',
-        height: 6-,
-        flexDirection: 'row';
+        height: 6,
+        flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 12,
     },
@@ -86,5 +88,3 @@ const styles = StyleSheet.create({
         tintColor: '#ffffff',
     },
 });
-
-export default SongPlayer;

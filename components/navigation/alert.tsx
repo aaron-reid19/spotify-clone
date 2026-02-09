@@ -10,10 +10,12 @@ const alertButton = () => {
             style={styles.alertButton}
             onPress={handleAlertPress}
         >
-            <Text style={StyleSheet.alertButtonText}>Alert</Text>
+            <Text style={styles.alertButtonText}>Alert</Text>
         </TouchableOpacity>
     );
 };
+
+export default alertButton;
 
 const styles = StyleSheet.create({
     alertButton: {
@@ -29,5 +31,3 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 });
-
-export default alertButton;
