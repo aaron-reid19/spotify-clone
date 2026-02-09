@@ -1,23 +1,23 @@
-import { FlatList, StyleSheet, View } from 'react-native';
+import { Dimensions, FlatList, Image, StyleSheet, Text, View, } from 'react-native';
 
 const PlayListIcon = {
   pinned: require("../../assets/images/pinned.png"),
   downloaded: require("../../assets/images/downloaded.png")
-}as const;
+} as const;
 
 type PlaylistIconKey = keyof typeof PlayListIcon;
 
-type PlayList = { 
+type PlayList = {
   id: string;
   coverImage: any;
   playlistName: string;
   playlistOwner?: string;
-  description?:  string;
+  description?: string;
   songNumber?: number;
   icons?: PlaylistIconKey[];
 }
 
-const playlist:PlayList[]= [
+const playlist: PlayList[] = [
   {
     id: "1",
     coverImage: require("../../assets/images/likedSongs.jpg"),
@@ -27,7 +27,7 @@ const playlist:PlayList[]= [
   },
   {
     id: "2",
-    coverImage: require("../../assets/images/bookmarked.png"), 
+    coverImage: require("../../assets/images/bookmarked.png"),
     playlistName: "Your Episodes",
     description: "Playlist • Saved episodes",
     icons: ["pinned"],
@@ -75,24 +75,47 @@ const playlist:PlayList[]= [
     playlistOwner: "aar.reid",
   },
 ];
-
+const CARD_WIDTH =
+  (Dimensions.get("window").width - 12 * (3 + 1)) / 3;
 const LibraryPage = () => {
   return (
     <FlatList
-    data = {playlist}
-    keyExtractor={(playlist) => playlist.id}
-    numColumns={3}
-    columnWrapperStyle ={{gap:12}}
-    contentContainerStyle={{paddingHorizontal: 12}}
-    renderItem={({item}) =>(
-      <View>
-        <View></View>
-      </View>
-    )}
+      data={playlist}
+      keyExtractor={(item) => item.id}
+      numColumns={3}
+      columnWrapperStyle={{ gap: 12 }}
+      contentContainerStyle={{ paddingHorizontal: 12 }}
+      renderItem={({ item }) => (
+        <View style={styles.playlistContainer}>
+          <Image source={item.coverImage} style={styles.coverImage} />
+          <Text style={styles.playlistName} numberOfLines={1}>
+            {item.playlistName}
+          </Text>
+        </View>
+      )}
     ></FlatList>
   )
 }
 
 export default LibraryPage
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  playlistContainer: {
+    width: CARD_WIDTH,
+    marginBottom: 16,
+  },
+
+  coverImage: {
+    width: "100%",
+    aspectRatio: 1,
+    borderRadius: 6,
+  },
+
+  playlistName: {
+    marginTop: 6,
+    fontWeight: "600",
+    color: "white",
+    fontSize: 13,
+  },
+
+})
