@@ -1,4 +1,5 @@
-import { Dimensions, FlatList, Image, StyleSheet, Text, View, } from 'react-native';
+import { useState } from 'react';
+import { Image, LayoutChangeEvent, StyleSheet, Text, View } from 'react-native';
 
 const PlayListIcon = {
   pinned: require("../../assets/images/pinned.png"),
@@ -35,7 +36,7 @@ const playlist: PlayList[] = [
   {
     id: "3",
     coverImage: require("../../assets/images/elevatorMusic.png"), // placeholder
-    playlistName: "Dj Matlab House Playlist",
+    playlistName: "Elevator Music",
     playlistOwner: "Juan Pablo Borg...",
   },
   {
@@ -77,40 +78,57 @@ const playlist: PlayList[] = [
 ];
 const GAP = 8;
 const PADDING = 12;
-const CARD_WIDTH =
-  (Dimensions.get("window").width - PADDING * 2 - GAP * 2) / 3;
+const TEXT_HEIGHT = 19; // fontSize 13 + marginTop 6
 const LibraryPage = () => {
+  const [cardSize, setCardSize] = useState(0);
+  const rows = [playlist.slice(0, 3), playlist.slice(3, 6), playlist.slice(6, 9)];
+
+  const handleLayout = (e: LayoutChangeEvent) => {
+    const { width, height } = e.nativeEvent.layout;
+    const contentWidth = width - PADDING * 2;
+    const contentHeight = height - PADDING * 2;
+    const maxFromWidth = (contentWidth - GAP * 2) / 3;
+    const maxFromHeight = (contentHeight - GAP * 2 - TEXT_HEIGHT * 3) / 3;
+    setCardSize(Math.min(maxFromWidth, maxFromHeight));
+  };
+
   return (
-    <FlatList
-      style={{ flex: 1 }}
-      data={playlist}
-      keyExtractor={(item) => item.id}
-      numColumns={3}
-      columnWrapperStyle={{ gap: GAP }}
-      contentContainerStyle={{ paddingHorizontal: PADDING }}
-      renderItem={({ item }) => (
-        <View style={styles.playlistContainer}>
-          <Image source={item.coverImage} style={styles.coverImage} />
-          <Text style={styles.playlistName} numberOfLines={1}>
-            {item.playlistName}
-          </Text>
+    <View style={styles.gridContainer} onLayout={handleLayout}>
+      {cardSize > 0 && rows.map((row, rowIndex) => (
+        <View key={rowIndex} style={styles.row}>
+          {row.map((item) => (
+            <View key={item.id} style={styles.playlistContainer}>
+              <Image source={item.coverImage} style={[styles.coverImage, { width: cardSize, height: cardSize }]} />
+              <Text style={styles.playlistName} numberOfLines={1}>
+                {item.playlistName}
+              </Text>
+            </View>
+          ))}
         </View>
-      )}
-    ></FlatList>
+      ))}
+    </View>
   )
 }
 
 export default LibraryPage
 
 const styles = StyleSheet.create({
+  gridContainer: {
+    flex: 1,
+    padding: PADDING,
+    gap: GAP,
+    overflow: 'hidden',
+  },
+  row: {
+    flexDirection: 'row',
+    gap: GAP,
+    justifyContent: 'center',
+  },
   playlistContainer: {
-    width: CARD_WIDTH,
-    marginBottom: 8,
+    alignItems: 'center',
   },
 
   coverImage: {
-    width: "100%",
-    aspectRatio: 1,
     borderRadius: 6,
   },
 
