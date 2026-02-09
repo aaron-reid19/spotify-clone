@@ -12,8 +12,10 @@ const AlertButton = () => {
             style={styles.alertButton}
             onPress={handleAlertPress}
         >
+        
             <Text style={styles.alertButtonText}>Alert</Text>
         </TouchableOpacity>
+        
     );
 };
 
