@@ -34,6 +34,8 @@ const SongPlayer = () => {
     );
 };
 
+export default SongPlayer;
+
 // Styles
 const styles = StyleSheet.create({
     container: {
@@ -86,5 +88,3 @@ const styles = StyleSheet.create({
         tintColor: '#ffffff',
     },
 });
-
-export default SongPlayer;

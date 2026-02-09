@@ -15,6 +15,8 @@ const alertButton = () => {
     );
 };
 
+export default alertButton;
+
 const styles = StyleSheet.create({
     alertButton: {
         backgroundColor: '#1DB954',
@@ -29,5 +31,3 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 });
-
-export default alertButton;
