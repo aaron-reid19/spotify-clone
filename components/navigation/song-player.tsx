@@ -76,13 +76,13 @@ const styles = StyleSheet.create({
     },
 
     deviceIcon: {
-        width: 20,
-        height: 20,
+        width: 32,
+        height: 32,
         marginRight: 16,
     },
 
     playIcon: {
-        width: 32,
-        height: 32,
+        width: 28,
+        height: 28,
     },
 });

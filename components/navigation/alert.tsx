@@ -25,15 +25,15 @@ export default AlertButton;
 const styles = StyleSheet.create({
     alertButton: {
         backgroundColor: '#1DB954',
-        padding: 12,
+        padding: 8,
         borderRadius: 25,
         alignItems: 'center',
-        marginHorizontal: 20,
+        marginHorizontal: 16,
         marginVertical: 8,
     },
     alertButtonText: {
         color: '#ffffff',
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 'bold',
     },
 });
