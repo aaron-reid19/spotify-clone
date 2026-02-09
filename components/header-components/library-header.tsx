@@ -12,7 +12,7 @@ function LibraryHeader() {
   return (
     <View style={styles.header}>
       <Image
-        source={require('../../assets/images/jaronadel.png')}
+        source={require('../../assets/images/jaronadel.PNG')}
         style={styles.profilePic}
       />
       <Text style={styles.title}>Your Library</Text>
@@ -21,7 +21,7 @@ function LibraryHeader() {
         style={styles.icon}
       />
       <Image
-        source={require('../../assets/images/plus-icon.png')}
+        source={require('../../assets/images/add-icon.png')}
         style={styles.icon}
       />
     </View>
