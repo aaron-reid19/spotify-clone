@@ -101,13 +101,21 @@ export default LibraryPage
 
 const styles = StyleSheet.create({
   playlistContainer: {
-    
+    width: CARD_WIDTH,        
+    marginBottom: 16,         
   },
-  playlistName: {
 
-  },
   coverImage: {
+    width: "100%",
+    aspectRatio: 1,           
+    borderRadius: 6,
+  },
 
+  playlistName: {
+    marginTop: 6,
+    fontWeight: "600",
+    color: "white",
+    fontSize: 13,
   },
   
 })

@@ -1,15 +1,7 @@
-import { Text, View } from "react-native";
+import LibraryPage from "./song-library/library-page";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Spotify</Text>
-    </View>
+    <LibraryPage />
   );
 }
