@@ -34,19 +34,19 @@ const playlist: PlayList[] = [
   },
   {
     id: "3",
-    coverImage: require("../../assets/images/dj-matlab.jpg"), // placeholder
+    coverImage: require("../../assets/images/dj-Matlab.png"), // placeholder
     playlistName: "Dj Matlab House Playlist",
     playlistOwner: "Juan Pablo Borg...",
   },
   {
     id: "4",
-    coverImage: require("../../assets/images/dJBeta.jpg"), // placeholder
+    coverImage: require("../../assets/images/DjBeta.jpg"), // placeholder
     playlistName: "DJ",
     description: "Tap to start",
   },
   {
     id: "5",
-    coverImage: require("../../assets/images/suelito.jpg"), // placeholder
+    coverImage: require("../../assets/images/suelito.png"), // placeholder
     playlistName: "Suelto",
     playlistOwner: "aar.reid",
   },
@@ -70,7 +70,7 @@ const playlist: PlayList[] = [
   },
   {
     id: "9",
-    coverImage: require("../../assets/images/uk.png"), // placeholder
+    coverImage: require("../../assets/images/Uk.png"), // placeholder
     playlistName: "Uk",
     playlistOwner: "aar.reid",
   },

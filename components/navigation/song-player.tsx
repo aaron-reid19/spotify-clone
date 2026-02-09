@@ -40,7 +40,7 @@ export default SongPlayer;
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#282828',
-        height: 6,
+        height: 60,
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 12,

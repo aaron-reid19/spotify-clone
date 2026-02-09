@@ -1,6 +1,6 @@
 import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const alertButton = () => {
+const AlertButton = () => {
     const handleAlertPress = () => {
         Alert.alert('Alert Button pressed');
     };
@@ -15,7 +15,7 @@ const alertButton = () => {
     );
 };
 
-export default alertButton;
+export default AlertButton;
 
 const styles = StyleSheet.create({
     alertButton: {
