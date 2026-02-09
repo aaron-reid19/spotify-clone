@@ -13,25 +13,25 @@ const NavigationBar = () => {
             
             {/*Home Icon*/}
             <View style={styles.tab}>
-                <Image source={homeIcon} style={styles.iconInactive} />
+                <Image source={homeIcon} style={styles.icon} />
                 <Text style={styles.label}>Home</Text>
             </View>
 
             {/*Search Icon*/}
             <View style={styles.tab}>
-                <Image source={searchIcon} style={styles.iconInactive} />
+                <Image source={searchIcon} style={styles.icon} />
                 <Text style={styles.label}>Search</Text>
             </View>
 
              {/*Your Library Icon*/}
             <View style={styles.tab}>
-                <Image source={yourLibraryIcon} style={styles.iconActive} />
+                <Image source={yourLibraryIcon} style={styles.icon} />
                 <Text style={styles.labelActive}>Your Library</Text>
             </View>
 
              {/*Create Icon*/}
             <View style={styles.tab}>
-                <Image source={createIcon} style={styles.iconInactive} />
+                <Image source={createIcon} style={styles.icon} />
                 <Text style={styles.label}>Create</Text>
             </View>
 
@@ -66,21 +66,14 @@ const styles = StyleSheet.create({
 
     labelActive: {
         fontSize: 10,
-        color: '#ffffff',
+        color: '#fff',
         marginTop: 4,
     },
 
-    iconActive: {
+    icon: {
         width: 24,
         height: 24,
-        tintColor: '#ffffff',
     },
-
-    iconInactive: {
-        width: 24,
-        height: 24,
-        tintColor: '#b3b3b3',
-    }
     
 });
 
