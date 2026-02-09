@@ -4,7 +4,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 const homeIcon = require('@/assets/images/home-icon.png');
 const searchIcon = require('@/assets/images/search-nav-icon.png');
 const yourLibraryIcon = require('@/assets/images/your-library-icon.png');
-const createIcon = require('@/assets/images/create-icon.png');
+const createIcon = require('@/assets/images/add-icon.png');
 
 // Component Function 
 const NavigationBar = () => {
@@ -13,7 +13,7 @@ const NavigationBar = () => {
             
             {/*Home Icon*/}
             <View style={styles.tab}>
-                <Image source={homeIcon} style={styles.icon} />
+                <Image source={homeIcon} style={styles.iconHome} />
                 <Text style={styles.label}>Home</Text>
             </View>
 
@@ -71,8 +71,13 @@ const styles = StyleSheet.create({
     },
 
     icon: {
-        width: 24,
-        height: 24,
+        width: 22,
+        height: 22,
+    },
+    iconHome: {
+        width: 18,
+        height: 20,
+
     },
     
 });
