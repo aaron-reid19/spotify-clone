@@ -34,7 +34,7 @@ const playlist: PlayList[] = [
   },
   {
     id: "3",
-    coverImage: require("../../assets/images/dj-matlab.jpg"), // placeholder
+    coverImage: require("../../assets/images/dj-matlab.png"), // placeholder
     playlistName: "Dj Matlab House Playlist",
     playlistOwner: "Juan Pablo Borg...",
   },
