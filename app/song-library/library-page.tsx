@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View } from 'react-native';
+import { Dimensions, FlatList, Image, StyleSheet, Text, View, } from 'react-native';
 
 const PlayListIcon = {
   pinned: require("../../assets/images/pinned.png"),
@@ -75,18 +75,22 @@ const playlist:PlayList[]= [
     playlistOwner: "aar.reid",
   },
 ];
-
+const CARD_WIDTH =
+  (Dimensions.get("window").width - 12 * (3 + 1)) /3;
 const LibraryPage = () => {
   return (
     <FlatList
     data = {playlist}
-    keyExtractor={(playlist) => playlist.id}
+    keyExtractor={(item) =>item.id}
     numColumns={3}
     columnWrapperStyle ={{gap:12}}
     contentContainerStyle={{paddingHorizontal: 12}}
     renderItem={({item}) =>(
-      <View>
-        <View></View>
+      <View style = {styles.playlistContainer}>
+        <Image source={item.coverImage} style={styles.coverImage} />
+          <Text style={styles.playlistName} numberOfLines={1}>
+            {item.playlistName}
+          </Text>
       </View>
     )}
     ></FlatList>
@@ -95,4 +99,15 @@ const LibraryPage = () => {
 
 export default LibraryPage
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  playlistContainer: {
+    
+  },
+  playlistName: {
+
+  },
+  coverImage: {
+
+  },
+  
+})
