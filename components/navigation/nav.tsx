@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 
 // Icons
 const homeIcon = require('@/assets/images/home-icon.png');
-const searchIcon = require('@/assets/images/search-icon.png');
+const searchIcon = require('@/assets/images/search-nav-icon.png');
 const yourLibraryIcon = require('@/assets/images/your-library-icon.png');
 const createIcon = require('@/assets/images/create-icon.png');
 
