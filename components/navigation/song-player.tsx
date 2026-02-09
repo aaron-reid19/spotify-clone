@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
     },
 
     songTitle: {
-        color: '#ffffff',
         fontSize: 14,
         fontWeight: '500',
     },
@@ -78,13 +77,11 @@ const styles = StyleSheet.create({
     deviceIcon: {
         width: 20,
         height: 20,
-        tintColor: '#ffffff',
         marginRight: 16,
     },
 
     playIcon: {
         width: 32,
         height: 32,
-        tintColor: '#ffffff',
     },
 });

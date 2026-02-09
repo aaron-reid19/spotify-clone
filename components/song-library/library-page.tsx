@@ -75,16 +75,19 @@ const playlist: PlayList[] = [
     playlistOwner: "aar.reid",
   },
 ];
+const GAP = 8;
+const PADDING = 12;
 const CARD_WIDTH =
-  (Dimensions.get("window").width - 12 * (3 + 1)) / 3;
+  (Dimensions.get("window").width - PADDING * 2 - GAP * 2) / 3;
 const LibraryPage = () => {
   return (
     <FlatList
+      style={{ flex: 1 }}
       data={playlist}
       keyExtractor={(item) => item.id}
       numColumns={3}
-      columnWrapperStyle={{ gap: 12 }}
-      contentContainerStyle={{ paddingHorizontal: 12 }}
+      columnWrapperStyle={{ gap: GAP }}
+      contentContainerStyle={{ paddingHorizontal: PADDING }}
       renderItem={({ item }) => (
         <View style={styles.playlistContainer}>
           <Image source={item.coverImage} style={styles.coverImage} />
@@ -102,7 +105,7 @@ export default LibraryPage
 const styles = StyleSheet.create({
   playlistContainer: {
     width: CARD_WIDTH,
-    marginBottom: 16,
+    marginBottom: 8,
   },
 
   coverImage: {
