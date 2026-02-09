@@ -70,7 +70,7 @@ const playlist: PlayList[] = [
   },
   {
     id: "9",
-    coverImage: require("../../assets/images/uk.png"), // placeholder
+    coverImage: require("../../assets/images/Uk.png"), // placeholder
     playlistName: "Uk",
     playlistOwner: "aar.reid",
   },
