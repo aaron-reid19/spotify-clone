@@ -34,7 +34,7 @@ const playlist: PlayList[] = [
   },
   {
     id: "3",
-    coverImage: require("../../assets/images/dj-Matlab.png"), // placeholder
+    coverImage: require("../../assets/images/elevatorMusic.png"), // placeholder
     playlistName: "Dj Matlab House Playlist",
     playlistOwner: "Juan Pablo Borg...",
   },
@@ -46,31 +46,31 @@ const playlist: PlayList[] = [
   },
   {
     id: "5",
-    coverImage: require("../../assets/images/suelito.png"), // placeholder
+    coverImage: require("../../assets/images/top.png"), // placeholder
     playlistName: "Suelto",
     playlistOwner: "aar.reid",
   },
   {
     id: "6",
-    coverImage: require("../../assets/images/whatItDo.png"), // placeholder
+    coverImage: require("../../assets/images/modernJazz.png"), // placeholder
     playlistName: "what it do",
     playlistOwner: "aar.reid",
   },
   {
     id: "7",
-    coverImage: require("../../assets/images/paraMiAlma.png"), // placeholder
+    coverImage: require("../../assets/images/danceparty.png"), // placeholder
     playlistName: "Para mi alma",
     playlistOwner: "aar.reid",
   },
   {
     id: "8",
-    coverImage: require("../../assets/images/rawr.png"), // placeholder
+    coverImage: require("../../assets/images/daylist.png"), // placeholder
     playlistName: "Rawr",
     playlistOwner: "Maria Rivera",
   },
   {
     id: "9",
-    coverImage: require("../../assets/images/Uk.png"), // placeholder
+    coverImage: require("../../assets/images/popmix.png"), // placeholder
     playlistName: "Uk",
     playlistOwner: "aar.reid",
   },
