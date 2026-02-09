@@ -14,7 +14,6 @@ export default function Index() {
         <LibraryHeader/>
         <FilterBar/>
         <LibraryPage/>
-        {/* TODO: Kaley's Footer */}
         <SongPlayer/>
         <alertButton/>
         <NavigationBar/>
