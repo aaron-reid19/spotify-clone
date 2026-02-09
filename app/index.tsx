@@ -1,6 +1,9 @@
 import { View, StyleSheet } from "react-native";
 import FilterBar from "../components/header-components/filter-bar";
 import LibraryPage from "../components/song-library/library-page";
+import NavigationBar from "@/components/navigation/nav";
+import SongPlayer from "@/components/navigation/song-player";
+import alertButton from "@/components/navigation/alert";
 
 // Index Page Rendering
 export default function Index() {
@@ -11,6 +14,9 @@ export default function Index() {
         <FilterBar/>
         <LibraryPage/>
         {/* TODO: Kaley's Footer */}
+        <SongPlayer/>
+        <alertButton/>
+        <NavigationBar/>
     </View>
   );
 }
