@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 const deviceIcon = require('@/assets/images/device-icon.png');
 const playIcon = require('@/assets/images/play-icon.png');

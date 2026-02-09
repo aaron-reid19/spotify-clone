@@ -1,4 +1,4 @@
-import {Text, Alert, TouchableOpacity, StyleSheet } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const alertButton = () => {
     const handleAlertPress = () => {
