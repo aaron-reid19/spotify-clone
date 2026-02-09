@@ -40,4 +40,6 @@ function FilterBar() {
   );
 }
 
+// TODO: Filter Bar Styling
+
 export default FilterBar;
