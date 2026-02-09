@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 const deviceIcon = require('@/assets/images/device-icon.png');
 const playIcon = require('@/assets/images/play-icon.png');
@@ -38,8 +38,8 @@ const SongPlayer = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#282828',
-        height: 6-,
-        flexDirection: 'row';
+        height: 6,
+        flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 12,
     },
