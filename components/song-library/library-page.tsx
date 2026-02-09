@@ -48,31 +48,31 @@ const playlist: PlayList[] = [
   {
     id: "5",
     coverImage: require("../../assets/images/top.png"), // placeholder
-    playlistName: "Suelto",
+    playlistName: "2025 Rewind",
     playlistOwner: "aar.reid",
   },
   {
     id: "6",
     coverImage: require("../../assets/images/modernJazz.png"), // placeholder
-    playlistName: "what it do",
+    playlistName: "You Like Jazz?",
     playlistOwner: "aar.reid",
   },
   {
     id: "7",
     coverImage: require("../../assets/images/danceparty.png"), // placeholder
-    playlistName: "Para mi alma",
+    playlistName: "Dance Party",
     playlistOwner: "aar.reid",
   },
   {
     id: "8",
     coverImage: require("../../assets/images/daylist.png"), // placeholder
-    playlistName: "Rawr",
+    playlistName: "Daylist",
     playlistOwner: "Maria Rivera",
   },
   {
     id: "9",
     coverImage: require("../../assets/images/popmix.png"), // placeholder
-    playlistName: "Uk",
+    playlistName: "Alt Pop Mix",
     playlistOwner: "aar.reid",
   },
 ];
