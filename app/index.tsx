@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import FilterBar from "../components/header-components/filter-bar";
 import LibraryPage from "../components/song-library/library-page";
 
@@ -16,4 +16,9 @@ export default function Index() {
 }
 
 // Index Page Styling
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#121212",
+  },
+});
