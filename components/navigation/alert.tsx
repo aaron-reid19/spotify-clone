@@ -1,4 +1,4 @@
-import {Text, Alert, TouchableOpacity, StyleSheet } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const alertButton = () => {
     const handleAlertPress = () => {
@@ -10,7 +10,7 @@ const alertButton = () => {
             style={styles.alertButton}
             onPress={handleAlertPress}
         >
-            <Text style={StyleSheet.alertButtonText}>Alert</Text>
+            <Text style={styles.alertButtonText}>Alert</Text>
         </TouchableOpacity>
     );
 };

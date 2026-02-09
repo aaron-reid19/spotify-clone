@@ -1,4 +1,4 @@
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 // Icons
 const homeIcon = require('@/assets/images/home-icon.png');
@@ -38,6 +38,8 @@ const NavigationBar = () => {
         </View>
     );
 };
+
+export default NavigationBar; 
 
 // Styles
 const styles = StyleSheet.create({
@@ -82,4 +84,3 @@ const styles = StyleSheet.create({
     
 });
 
-export default NavigationBar; 
