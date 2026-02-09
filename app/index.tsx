@@ -1,4 +1,5 @@
 import { View, StyleSheet } from "react-native";
+import LibraryHeader from "../components/header-components/library-header";
 import FilterBar from "../components/header-components/filter-bar";
 import LibraryPage from "../components/song-library/library-page";
 
@@ -7,7 +8,7 @@ export default function Index() {
   return (
     <View
       style={styles.container}>
-        {/* TODO: Header Component */}
+        <LibraryHeader/>
         <FilterBar/>
         <LibraryPage/>
         {/* TODO: Kaley's Footer */}
